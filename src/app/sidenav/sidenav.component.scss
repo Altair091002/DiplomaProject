@@ -1,5 +1,5 @@
 .sidenav {
-    background: #263238;
+    background: #392F6B;
     transition: all .5s ease;
     position: fixed;
     z-index: 1;
@@ -15,23 +15,29 @@
         width: 100%;
 
         .logo {
-            background: #fff;
+          background-color: transparent;
             text-align: center;
             width: 3rem;
             min-width: 3rem;
-            border-radius: 0.313rem;
             padding: 0.313rem;
             font-size: 24px;
             font-weight: 900;
             cursor: pointer;
             border: none;
+          img {
+            width: 100%;
+          }
         }
 
         .logo-text {
+            font-family: 'Baloo Bhaijaan 2', sans-serif;
             margin-left: 1.5rem;
             font-size: 24px;
             font-weight: 700;
             color: #fff;
+          span {
+            color: #A8B1E5;
+          }
         }
 
         .btn-close {
@@ -94,17 +100,17 @@
 
     .sidenav-nav-item:hover {
         .sidenav-nav-link {
-            background-color: #fff;
-            color: #000;
+            background-color: #65639C;
+            color: #fff;
         }
     }
 }
 
 .active {
-    background-color: #fff;
+    background-color: #65639C;
 
     .sidenav-link-icon,
     .sidenav-link-text {
-        color: #000;
+        color: #fff;
     }
 }

@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+}
+.container {
+  display: flex;
+}
+.col-6 {
+  position: relative;
+  width: 50%;
+}
+.svg {
+  position: absolute;
+  &_1{
+    top: -30px;
+    right: 100px;
+  }
+  &_2{
+    top: 150px;
+    right: 420px;
+    fill: #A8B1E5;
+  }
+}
+.col-left {
+  width: 600px;
+  padding-left: 30px;
+}
+.col-right {
+  display: flex;
+  justify-content: end;
+}
+.main-block {
+  padding: 100px 0 130px 0;
+  &_header {
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    font-style: normal;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 121px;
+    color: #6557AD;
+  }
+  &_text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+  }
+  &_button {
+    display: block;
+    margin: 50px auto 0;
+    width: 200px;
+    height: 48px;
+    background: #6557AD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+
+  }
+  &_images {
+    width: 500px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
