@@ -20,7 +20,9 @@ import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header/header.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { AnyQuestionsComponent } from './any-questions/any-questions.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HeaderComponent,
     SignInComponent,
     SignUpComponent,
+    AnyQuestionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,9 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MatDividerModule,
     MatStepperModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,22 +1,21 @@
 <header>
-  <nav>
-    <div class="container">
-        <div class="col-5 offset-2">
-          <ul class="menu">
-            <li class="menu_item"><a href="#" class="menu_link">КУРСЫ</a></li>
-            <li class="menu_item"><a href="#" class="menu_link">О НАС</a></li>
-            <li class="menu_item"><a href="#" class="menu_link">ЭТАПЫ ОБУЧЕНИЯ</a></li>
-            <li class="menu_item"><a href="#" class="menu_link">ВОПРОСЫ</a></li>
-          </ul>
-        </div>
-<!--        <div class="col-4">-->
-<!--          <div class="header_btn">Sign in</div>-->
-<!--          <div class="header_btn">Sign up</div>-->
+<!--  <nav>-->
+<!--    <div class="container">-->
+<!--        <div class="col-5 offset-2">-->
+<!--          <ul class="menu">-->
+<!--            <li class="menu_item"><a href="#" class="menu_link">КУРСЫ</a></li>-->
+<!--            <li class="menu_item"><a href="#" class="menu_link">О НАС</a></li>-->
+<!--            <li class="menu_item"><a href="#" class="menu_link">ЭТАПЫ ОБУЧЕНИЯ</a></li>-->
+<!--            <li class="menu_item"><a href="#" class="menu_link">ВОПРОСЫ</a></li>-->
+<!--          </ul>-->
 <!--        </div>-->
-      </div>
-  </nav>
+<!--&lt;!&ndash;        <div class="col-4">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="header_btn">Sign in</div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="header_btn">Sign up</div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--      </div>-->
+<!--  </nav>-->
 </header>
-<mat-divider></mat-divider>
 <div class="main-block">
   <div class="container_main">
     <div class="col-6 col-left">
@@ -207,14 +206,16 @@
       </mat-step>
 
 
-      <!-- Icon overrides. -->
-      <ng-template matStepperIcon="phone">
-        <mat-icon>call_end</mat-icon>
-      </ng-template>
-      <ng-template matStepperIcon="chat">
-        <mat-icon>forum</mat-icon>
-      </ng-template>
-    </mat-stepper>
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>call_end</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>forum</mat-icon>
+    </ng-template>
+  </mat-stepper>
+
+    <app-any-questions></app-any-questions>
   </div>
 
 </section>
