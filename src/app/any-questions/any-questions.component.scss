@@ -1,3 +1,18 @@
+.any_questions {
+  min-height: 200px;
+  background-color: #6557AD;
+  padding: 60px 20px 60px 20px;
+  border-radius: 20px;
+  &_header {
+    color: #eeeeee;
+  }
+  &_text {
+    color: #eeeeee;
+  }
+  button {
+    color: white;
+  }
+}
 .main-block_button {
   display: block;
   margin-right: 10px;
