@@ -33,3 +33,25 @@
   line-height: 34px;
   color: #FFFFFF;
 }
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  list-style-type: none;
+  &_link {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 300;
+    &:hover{
+      color: #6557AD;
+    }
+  }
+}
+
+header {
+  background-color: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+}
+a {
+  text-decoration: none;
+}

@@ -1,4 +1,16 @@
-<div class="head" [ngClass]="getHeaderClass()">
-  <button [routerLink] = "['/sign-in']" class="main-block_button" (click)="openSignInDialog()">Sign in</button>
-  <button [routerLink] = "['/sign-up']" class="main-block_button" (click)="openSignUpDialog()">Sign up</button>
-</div>
+  <header class="head" [ngClass]="getHeaderClass()">
+    <nav class="m-auto">
+      <div class="container">
+        <ul class="menu d-flex">
+          <li class="menu_item mx-4"><a href="#" class="menu_link">КУРСЫ</a></li>
+          <li class="menu_item mx-4"><a href="#" class="menu_link">О НАС</a></li>
+          <li class="menu_item mx-4"><a href="#" class="menu_link">ЭТАПЫ ОБУЧЕНИЯ</a></li>
+          <li class="menu_item mx-4"><a href="#" class="menu_link">ВОПРОСЫ</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <button [routerLink] = "['/sign-in']" class="main-block_button" (click)="openSignInDialog()">Sign in</button>
+    <button [routerLink] = "['/sign-up']" class="main-block_button" (click)="openSignUpDialog()">Sign up</button>
+  </header>
+<mat-divider></mat-divider>
