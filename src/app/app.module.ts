@@ -13,7 +13,9 @@ import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { HeaderComponent } from './header/header.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -28,12 +30,14 @@ import {MatDividerModule} from '@angular/material/divider';
     PagesComponent,
     MediaComponent,
     SettingsComponent,
+    HeaderComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
