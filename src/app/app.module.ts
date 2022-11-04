@@ -13,6 +13,10 @@ import { CoupensComponent } from './coupens/coupens.component';
 import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatStepperModule} from "@angular/material/stepper";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 import { HeaderComponent } from './header/header.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -38,6 +42,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MatDividerModule,
+    MatStepperModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

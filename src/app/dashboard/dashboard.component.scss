@@ -2,11 +2,25 @@
   margin: 0;
 }
 .container {
+  width: 100%;
   display: flex;
+  justify-content: center;
+}
+header {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 30px;
 }
 .col-6 {
   position: relative;
   width: 50%;
+}
+.col-5 {
+  width: 70%;
+}
+.col-4 {
+  width: 30%;
+  display: flex;
 }
 .svg {
   position: absolute;
@@ -27,6 +41,25 @@
 .col-right {
   display: flex;
   justify-content: end;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  list-style-type: none;
+  &_link {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 300;
+    &:hover{
+      text-decoration: none;
+      color: #000000;
+    }
+
+
+
+  }
 }
 .main-block {
   padding: 100px 0 130px 0;

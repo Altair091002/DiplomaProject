@@ -2,36 +2,36 @@ export const navbarData = [
     {
         routeLink: 'dashboard',
         icon: 'fal fa-home',
-        label: 'Dashboard'
+        label: 'Главная'
     },
     {
         routeLink: 'products',
         icon: 'fal fa-box-open',
-        label: 'Products'
+        label: 'О нас'
     },
     {
         routeLink: 'statistics',
         icon: 'fal fa-chart-bar',
-        label: 'Statistics'
+        label: 'Курсы'
     },
     {
         routeLink: 'coupens',
         icon: 'fal fa-tags',
-        label: 'Coupens'
+        label: 'Контакты'
     },
     {
         routeLink: 'pages',
         icon: 'fal fa-file',
-        label: 'Pages'
+        label: 'Страницы'
     },
     {
         routeLink: 'media',
         icon: 'fal fa-camera',
-        label: 'Media'
+        label: 'Медия'
     },
     {
         routeLink: 'settings',
         icon: 'fal fa-cog',
-        label: 'Settings'
+        label: 'Настройки'
     },
 ];
