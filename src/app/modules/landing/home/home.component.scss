@@ -1,0 +1,314 @@
+.any_questions {
+  min-height: 200px;
+  background-color: #6557AD;
+  padding: 60px 20px 60px 20px;
+  border-radius: 20px;
+  &_header {
+    color: #eeeeee;
+  }
+  &_text {
+    color: #eeeeee;
+  }
+  button {
+    color: white;
+  }
+}
+.main-block_button {
+  display: block;
+  margin-right: 10px;
+  min-width: 200px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6557AD;
+}
+
+.img_bg_container{
+  //position: absolute;
+}
+
+*{
+  margin: 0;
+}
+.container_main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 30px;
+}
+.col-6 {
+  position: relative;
+  width: 50%;
+}
+.col-5 {
+  width: 70%;
+}
+
+.svg {
+  position: absolute;
+  &_1{
+    top: -30px;
+    right: 100px;
+  }
+  &_2{
+    top: 150px;
+    right: 420px;
+    fill: #A8B1E5;
+  }
+}
+.col-left {
+  width: 600px;
+  padding-left: 30px;
+}
+.col-right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  list-style-type: none;
+  &_link {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 300;
+    &:hover{
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+}
+.main-block {
+  padding: 100px 0 130px 0;
+  &_header {
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    font-style: normal;
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 121px;
+    color: #6557AD;
+  }
+  &_text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+  }
+  &_button {
+    display: block;
+    margin: 50px auto 0;
+    width: 200px;
+    height: 48px;
+    background: #6557AD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 38px;
+    color: #FFFFFF;
+
+  }
+  &_images {
+    width: 500px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.courses {
+  min-height: 600px;
+  padding: 60px 0 60px 0;
+  &_header {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+  }
+  .col-6{
+    display: flex;
+    justify-content: center;
+  }
+}
+.row {
+  margin-top: 75px;
+}
+.container .card {
+  max-width : 400px;
+  height : 300px;
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 20px 15px;
+
+  display : flex;
+
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+}
+.container .card:hover {
+  height : 320px;
+}
+
+.container .card .image {
+  display: flex;
+  justify-content:center ;
+  background-color: #fff;
+  position : relative;
+  width : 155px;
+  height : 155px;
+  top : -40%;
+  left: 28%;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+  border-radius: 20px;
+}
+
+.container .card .image img {
+  width : 100%;
+  border-radius : 15px;
+}
+
+.container .card .content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+
+}
+
+.container .card:hover .content {
+  margin-top : 30px;
+  visibility : visible;
+  opacity : 1;
+  transition-delay: 0.2s;
+}
+.about {
+  min-height: 600px;
+  padding: 80px 30px 80px 30px;
+  background-color: #6557AD;
+  border-radius: 20px;
+  .row {
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  &_header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 59px;
+    color: #FFFFFF;
+    span {
+      font-family: 'Baloo Bhaijaan 2', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 90px;
+      color: #FFFFFF;
+    }
+  }
+  &_img {
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    img {
+      width: 100%;
+    }
+  }
+  &_card {
+    &_header {
+      margin-top: 28px;
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 35px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    &_text {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 35px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+
+    }
+  }
+}
+.steps {
+  min-height: 300px;
+  padding: 60px 0 60px 0;
+  &_header {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 64px;
+    color: #000000;
+  }
+  &_text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 0.65);
+  }
+  &_image {
+    width: 400px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.steps_btn {
+  margin-top: 20px;
+  display: block;
+  padding: 5px;
+  margin-right: 10px;
+  min-width: 100px;
+  background: #6557AD;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 34px;
+  color: #FFFFFF;
+}
+
+

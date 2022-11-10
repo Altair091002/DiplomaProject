@@ -5,6 +5,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {SignUpComponent} from "./sign-up.component";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {ReactiveFormsModule} from "@angular/forms";
+import {AlertComponent} from './alert/alert.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 const routes: Route[] = [
   {
@@ -15,14 +17,16 @@ const routes: Route[] = [
 
 @NgModule({
   declarations: [
-    SignUpComponent
+    SignUpComponent,
+    AlertComponent
   ],
   imports: [
     RouterModule.forChild(routes),
     MatFormFieldModule,
     MatIconModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ]
 })
 export class SignUpModule {
