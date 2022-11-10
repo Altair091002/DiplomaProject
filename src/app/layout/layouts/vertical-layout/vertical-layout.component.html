@@ -8,6 +8,23 @@
       <img class="w-30" src="assets/images/logo/logo-text.svg" alt="Logo image">
     </ng-template>
 
+    <div class="flex flex-col items-center w-full p-4" *ngIf="token">
+      <div class="relative w-24 h-24">
+        <img
+          class="w-full h-full rounded-full"
+          src="assets/images/avatars/default_avatar.svg"
+          alt="User avatar">
+      </div>
+      <div class="flex flex-col items-center justify-center w-full mt-6">
+        <div class="w-full whitespace-nowrap text-ellipsis overflow-hidden text-center leading-normal font-medium text-white">
+          {{username}}
+        </div>
+        <div class="w-full whitespace-nowrap text-ellipsis overflow-hidden text-center leading-normal font-medium text-gray-400">
+          {{email}}
+        </div>
+      </div>
+    </div>
+
     <ul class="sidenav-nav">
       <li class="sidenav-nav-item" *ngFor="let item of navigationData">
         <a class="sidenav-nav-link" [routerLink]="[item.routerLink]"
@@ -27,19 +44,24 @@
           <mat-icon>menu</mat-icon>
         </button>
       </div>
-      <div class="flex w-1/4 justify-end px-4">
-        <a mat-button>Sign in</a>
-        <button mat-raised-button class="signUp">Sign up</button>
+      <div class="flex w-1/4 justify-end px-4 min-w-fit">
+        <div *ngIf="!token; else userExist">
+          <a mat-button [routerLink]="['sign-in']">Sign in</a>
+          <button mat-raised-button class="signUp" [routerLink]="['sign-up']">Sign up</button>
+        </div>
       </div>
+      <ng-template #userExist>
+        <button mat-raised-button (click)="signOut()">Sign out</button>
+      </ng-template>
     </div>
 
     <!-- Content -->
-    <div class="flex flex-col flex-auto">
+    <div class="flex flex-col justify-center h-screen bg-slate-100">
       <router-outlet></router-outlet>
     </div>
 
     <!-- Footer -->
-    <div class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent print:hidden">
+    <div class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 border-t bg-card dark:bg-transparent print:hidden">
       <span class="font-medium text-secondary">FizMath &copy; {{currentYear}}</span>
     </div>
   </mat-sidenav-content>
