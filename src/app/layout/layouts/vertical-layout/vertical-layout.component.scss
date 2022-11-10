@@ -1,0 +1,66 @@
+$width: 280px;
+$business_purple_color: #392F6B;
+$button_purple_color: #6557AD;
+$business_purple_color_lighten: #65639C;
+
+.signUp{
+  background: $button_purple_color;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.sidenav {
+  &_container{
+    min-height: 100vh;
+  }
+  max-width: $width;
+  min-width: $width;
+  background: $business_purple_color;
+  box-shadow: 0.05rem 0 1.25rem 0 rgba(black, 0.7);
+}
+
+.sidenav-nav {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &-item {
+    width: 100%;
+    margin-bottom: 0.6rem;
+
+    .sidenav-nav-link {
+      display: flex;
+      align-items: center;
+      height: 3rem;
+      color: #f3f3f3;
+      text-decoration: none;
+      border-radius: 0.6rem;
+      transition: all .3s ease;
+
+      .sidenav-link-icon {
+        font-size: 22px;
+        min-width: 2rem;
+        margin: 0 0.5rem;
+        text-align: center;
+      }
+
+      .sidenav-link-text {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .sidenav-nav-item:hover {
+    .sidenav-nav-link {
+      background-color: lighten($business_purple_color, 40%);
+    }
+  }
+}
+
+.active {
+  background-color: $business_purple_color_lighten;
+}
+

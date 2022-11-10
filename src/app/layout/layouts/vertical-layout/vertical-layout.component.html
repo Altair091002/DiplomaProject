@@ -1,0 +1,46 @@
+<mat-sidenav-container class="sidenav_container">
+  <mat-sidenav class="sidenav" #sidenav [mode]="'side'">
+
+    <div class="flex items-center h-20 p-6 pb-0">
+      <img *ngIf="isCompact; else notCompactLogo" class="w-30" src="assets/images/logo/logo.svg" alt="Logo image">
+    </div>
+    <ng-template #notCompactLogo>
+      <img class="w-30" src="assets/images/logo/logo-text.svg" alt="Logo image">
+    </ng-template>
+
+    <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let item of navigationData">
+        <a class="sidenav-nav-link" [routerLink]="[item.routerLink]"
+           routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon class="sidenav-link-icon" [ngStyle]="{'color':'white'}">{{item.icon}}</mat-icon>
+          <span class="sidenav-link-text" *ngIf="!isCompact">{{item.label}}</span>
+        </a>
+      </li>
+    </ul>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Header -->
+    <div class="relative flex flex-0 items-center w-full h-16 px-4 md:px-6 z-49 shadow dark:shadow-none dark:border-b bg-card dark:bg-transparent print:hidden">
+      <div class="w-3/4">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="flex w-1/4 justify-end px-4">
+        <a mat-button>Sign in</a>
+        <button mat-raised-button class="signUp">Sign up</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex flex-col flex-auto">
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Footer -->
+    <div class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent print:hidden">
+      <span class="font-medium text-secondary">FizMath &copy; {{currentYear}}</span>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
