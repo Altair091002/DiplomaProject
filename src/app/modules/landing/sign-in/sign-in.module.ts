@@ -5,7 +5,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
 import {ReactiveFormsModule} from "@angular/forms";
 
-const signInRoutes: Route[] = [
+const routes: Route[] = [
   {
     path: '',
     component: SignInComponent
@@ -17,7 +17,7 @@ const signInRoutes: Route[] = [
     SignInComponent
   ],
   imports: [
-    RouterModule.forChild(signInRoutes),
+    RouterModule.forChild(routes),
     MatFormFieldModule,
     MatIconModule,
     ReactiveFormsModule

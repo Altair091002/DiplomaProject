@@ -6,7 +6,7 @@ import {SignUpComponent} from "./sign-up.component";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {ReactiveFormsModule} from "@angular/forms";
 
-const signUpRoutes: Route[] = [
+const routes: Route[] = [
   {
     path: '',
     component: SignUpComponent
@@ -18,7 +18,7 @@ const signUpRoutes: Route[] = [
     SignUpComponent
   ],
   imports: [
-    RouterModule.forChild(signUpRoutes),
+    RouterModule.forChild(routes),
     MatFormFieldModule,
     MatIconModule,
     MatCheckboxModule,
