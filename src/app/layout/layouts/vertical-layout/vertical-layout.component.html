@@ -17,7 +17,7 @@
       </div>
       <div class="flex flex-col items-center justify-center w-full mt-6">
         <div class="w-full whitespace-nowrap text-ellipsis overflow-hidden text-center leading-normal font-medium text-white">
-          {{username}}
+          {{person}}
         </div>
         <div class="w-full whitespace-nowrap text-ellipsis overflow-hidden text-center leading-normal font-medium text-gray-400">
           {{email}}
@@ -36,7 +36,7 @@
     </ul>
 
   </mat-sidenav>
-  <mat-sidenav-content class="flex">
+  <mat-sidenav-content>
     <!-- Header -->
     <div class="relative flex flex-0 items-center w-full h-16 px-4 md:px-6 z-49 shadow dark:shadow-none dark:border-b bg-card dark:bg-transparent print:hidden">
       <div class="w-3/4">
@@ -56,13 +56,13 @@
     </div>
 
     <!-- Content -->
-    <div class="flex flex-col justify-center min-h-screen bg-slate-100">
+    <div class="flex flex-col min-h-screen flex-auto bg-slate-100 ">
       <router-outlet></router-outlet>
     </div>
 
     <!-- Footer -->
-<!--    <div class="relative bottom-0 flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 border-t bg-card dark:bg-transparent print:hidden">-->
-<!--      <span class="font-medium text-secondary">FizMath &copy; {{currentYear}}</span>-->
-<!--    </div>-->
+    <div class="relative bottom-0 flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 border-t bg-card dark:bg-transparent print:hidden">
+      <span class="font-medium text-secondary">FizMath &copy; {{currentYear}}</span>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

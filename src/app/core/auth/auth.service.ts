@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {JwtResponse} from "./jwt-response";
 import {SignUpInfo} from "./signup-info";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class AuthService {
     return this.http.post<string>(this.signupUrl, info, this.httpOptions);
   }
 
-  userDetails(){
+  userDetails(): Observable<any>{
     return this.http.get(this.userDetailsUrl);
   }
 

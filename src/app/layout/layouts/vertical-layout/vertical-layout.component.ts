@@ -12,7 +12,7 @@ export class VerticalLayoutComponent implements OnInit {
   navigationData: any = navData;
   currentYear: number = new Date().getFullYear();
   token = this.tokenStorage.getToken();
-  username: any = "Username";
+  person: Person | undefined;
   email: any = "Email@gmail.com";
 
   constructor(
@@ -21,10 +21,19 @@ export class VerticalLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.person = this.tokenStorage.getPerson()
+    console.log("Token person " + this.tokenStorage.getPerson())
+    console.log("`P username " + this.person)
   }
 
   signOut() {
     this.tokenStorage.signOut();
     window.location.reload();
   }
+}
+interface Person {
+  username: string;
+  email: string;
+  id: number;
+  password: string;
 }

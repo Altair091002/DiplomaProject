@@ -31,9 +31,11 @@ export class SignInComponent implements OnInit {
       data => {
         console.log(data)
         this.tokenStorage.saveToken(data.token);
-        this.router.navigate(['home']).then(
-          () => { window.location.reload(); }
-        )
+        this.tokenStorage.savePerson(data.person);
+        console.log(this.tokenStorage.getPerson());
+        // this.router.navigate(['home']).then(
+        //   () => { window.location.reload(); }
+        // )
       }
     );
   }

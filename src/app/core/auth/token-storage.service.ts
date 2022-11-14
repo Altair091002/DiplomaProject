@@ -1,18 +1,26 @@
 import { Injectable } from '@angular/core';
+import {Observable} from "rxjs";
 
 const TOKEN_KEY = 'AuthToken';
-const USERNAME_KEY = 'AuthUsername';
-const AUTHORITIES_KEY = 'AuthAuthorities';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenStorageService {
+  person: any;
 
   constructor() { }
 
   signOut() {
     window.sessionStorage.clear();
+  }
+
+  public savePerson(person: string) {
+    this.person = person;
+  }
+
+  public getPerson() {
+    return this.person;
   }
 
   public saveToken(token: string) {
@@ -23,4 +31,10 @@ export class TokenStorageService {
   public getToken() {
     return sessionStorage.getItem(TOKEN_KEY);
   }
+}
+interface Person {
+  username: string;
+  email: string;
+  id: number;
+  password: string;
 }
