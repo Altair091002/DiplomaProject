@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
 
   isList = false;
+  alert = false;
+  supportForm: any;
 
   constructor() { }
 
