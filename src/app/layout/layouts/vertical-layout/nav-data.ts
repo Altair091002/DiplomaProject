@@ -25,3 +25,10 @@ export const navData = [
         label: 'Настройки'
     },
 ];
+export const adminNavData = [
+  {
+    routerLink: 'dashboard',
+    icon: 'dashboard',
+    label: 'Dashboard'
+  },
+];

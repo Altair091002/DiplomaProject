@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <ul class="sidenav-nav">
+    <ul class="sidenav-nav" *ngIf="username!='admin'; else elseBlock">
       <li class="sidenav-nav-item" *ngFor="let item of navigationData">
         <a class="sidenav-nav-link" [routerLink]="[item.routerLink]"
            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -34,6 +34,18 @@
         </a>
       </li>
     </ul>
+
+    <ng-template #elseBlock>
+      <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let item of adminNavigation">
+          <a class="sidenav-nav-link" [routerLink]="[item.routerLink]"
+             routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <mat-icon class="sidenav-link-icon" [ngStyle]="{'color':'white'}">{{item.icon}}</mat-icon>
+            <span class="sidenav-link-text" *ngIf="!isCompact">{{item.label}}</span>
+          </a>
+        </li>
+      </ul>
+    </ng-template>
 
   </mat-sidenav>
   <mat-sidenav-content>
