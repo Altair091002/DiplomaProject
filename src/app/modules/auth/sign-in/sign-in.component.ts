@@ -31,6 +31,8 @@ export class SignInComponent implements OnInit {
       data => {
         console.log(data)
         this.tokenStorage.saveToken(data.token);
+        this.tokenStorage.saveUsername(data.username);
+        this.tokenStorage.saveEmail(data.email);
         this.tokenStorage.savePerson(data.person);
         console.log(this.tokenStorage.getPerson());
         this.router.navigate(['home']).then(

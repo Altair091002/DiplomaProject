@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {navData} from './nav-data';
+import {adminNavData, navData} from './nav-data';
 import {TokenStorageService} from "../../../core/auth/token-storage.service";
 import {UserService} from "../../../core/auth/user.service";
 
@@ -10,23 +10,20 @@ import {UserService} from "../../../core/auth/user.service";
 })
 export class VerticalLayoutComponent implements OnInit {
   navigationData: any = navData;
+  adminNavigation: any = adminNavData;
   isCompact: boolean = false;
   currentYear: number = new Date().getFullYear();
   token = this.tokenStorage.getToken();
-  email: any;
-  username: any;
+  email = this.tokenStorage.getEmail();
+  username = this.tokenStorage.getUsername();
 
   constructor(
     private tokenStorage: TokenStorageService,
-    private userService: UserService
   ) {
   }
 
   ngOnInit(): void {
-    console.log('token:', this.token)
-    if (this.token != null){
-      console.log(this.userService.userDetails());
-    }
+
   }
 
   signOut() {

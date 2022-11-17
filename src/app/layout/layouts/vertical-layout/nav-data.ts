@@ -30,3 +30,10 @@ export const navData = [
       label: 'Админ панель'
     },
 ];
+export const adminNavData = [
+  {
+    routerLink: 'dashboard',
+    icon: 'dashboard',
+    label: 'Dashboard'
+  },
+];
