@@ -117,73 +117,64 @@
       </div>
     </section>
 
-<!--    Here we will add TAILWIND-->
 
-    <section class="steps" id="steps">
-      <div class="container">
-        <div class="steps_header">
+    <section class="px-7 bg-white my-12 rounded-3xl p-6">
+        <div class="text-center font-bold text-3xl mb-4">
           ЭТАПЫ ОБУЧЕНИЯ В FIZMATH
         </div>
         <mat-stepper>
           <mat-step label="Step 1" state="phone">
-            <div class="row">
-              <div class="col-6">
-                <div class="steps_image">
-                  <img src="../../assets/img/step_bg.png" alt="">
-                </div>
+            <div class="flex flex-row">
+              <div class="basis-2/4">
+                <img src="../../../../assets/img/step_bg.png" class="mx-auto h-80 object-cover">
               </div>
-              <div class="col-6">
-                <div class="steps_header">
+              <div class="flex flex-col justify-center basis-2/4 text-center">
+                <div class=" font-bold text-2xl mb-4">
                   Выбор курса/пакета
                 </div>
-                <div class="steps_text">
+                <div class="font-normal opacity-75 text-xl mb-4">
                   Сперва пользователь должен выбрать тот пакет, который он будет использовать для курса.
                 </div>
-                <button class="steps_btn">
+                <button class="w-54 mx-auto bg-violet-600 text-white py-3 px-7 font-light text-lg rounded-full shadow">
                   Выбрать курс
                 </button>
               </div>
             </div>
-            <div>
+            <div class="flex justify-end">
               <button mat-button matStepperNext>Next</button>
             </div>
           </mat-step>
           <mat-step label="Step 2" state="chat">
-            <p>Socialize with each other.</p>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
-            </div>
           </mat-step>
           <mat-step label="Step 3">
-            <p>You're welcome.</p>
           </mat-step>
-
-
-          <!-- Icon overrides. -->
-          <ng-template matStepperIcon="phone">
-            <mat-icon>call_end</mat-icon>
-          </ng-template>
-          <ng-template matStepperIcon="chat">
-            <mat-icon>forum</mat-icon>
-          </ng-template>
         </mat-stepper>
-
-        <div class="any_questions" id="any_questions">
-          <!--  <img class="img_bg_container" src="assets/img/mask_group.png">-->
-          <div class="container">
-            <h1 class="any_questions_header">Остались вопросы?</h1>
-            <p class="any_questions_text">Запишитесь на бесплатную консультацию</p>
-            <form class="d-flex">
-              <input class="m-2 form-control form-control-lg w-25" type="text" placeholder="Ваше имя">
-              <input class="m-2 form-control form-control-lg w-25" type="text" placeholder="Ваш телефон">
-              <button type="button" class="btn">Отправить</button>
-            </form>
-          </div>
-        </div>
-      </div>
     </section>
-    <!--    Here we well end TAILWIND-->
+
+    <div class="bg-white rounded-3xl p-6 text-center text-black" >
+      <h1 class="text-2xl font-bold pb-4">Остались вопросы?</h1>
+      <p class="mb-4 text-xl font-normal">Запишитесь на бесплатную консультацию</p>
+      <form class="space-y-3 flex flex-col justify-center">
+        <!-- Name -->
+        <mat-form-field class="basis-2/6 min-w-[50%] max-w-4xl mx-auto" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            [required]="true">
+        </mat-form-field>
+        <!-- Email -->
+        <mat-form-field class="basis-2/6 min-w-[50%] max-w-4xl mx-auto" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            [required]="true">
+        </mat-form-field>
+        <div class="basis-2/6">
+          <button class="ml-4 w-80 bg-violet-600 mx-auto text-white py-3 px-7 font-light text-lg rounded-full shadow">Submit</button>
+        </div>
+      </form>
+    </div>
 
   </div>
 </div>
