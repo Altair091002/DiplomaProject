@@ -15,6 +15,7 @@ const routes: Routes = [
       {path: 'about-us', loadChildren: () => import('src/app/modules/client/about-us/about-us.module').then(m => m.AboutUsModule)},
       {path: 'contacts', loadChildren: () => import('src/app/modules/client/contacts/contacts.model').then(m => m.ContactsModel)},
       {path: 'settings', loadChildren: () => import('src/app/modules/client/settings/settings.module').then(m => m.SettingsModule)},
+      {path: 'dashboard', loadChildren: () => import('src/app/modules/admin/dashboard/dashboard.module').then(m => m.DashboardModule)},
     ]
   }
 ];

@@ -24,4 +24,9 @@ export const navData = [
         icon: 'settings',
         label: 'Настройки'
     },
+    {
+      routerLink: 'dashboard',
+      icon: 'extension',
+      label: 'Админ панель'
+    },
 ];
