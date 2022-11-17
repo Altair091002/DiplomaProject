@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {JwtResponse} from "./jwt-response";
-import {SignUpInfo} from "./signup-info";
+import {JwtResponse} from "./interfaces/jwt-response";
+import {SignUpInfo} from "./interfaces/signup-info";
 
 @Injectable({
   providedIn: 'root'
