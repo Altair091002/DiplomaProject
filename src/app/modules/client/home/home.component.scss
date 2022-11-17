@@ -15,59 +15,8 @@
     height: 479px;
   }
 }
-
-
 .about {
   background-color: #6557AD;
-  &_card {
-    &_text {
-      font-size: 20px;
-    }
-  }
-}
-.steps {
-  min-height: 300px;
-  padding: 60px 0 60px 0;
-  &_header {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 64px;
-    color: #000000;
-  }
-  &_text {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 35px;
-    color: rgba(0, 0, 0, 0.65);
-  }
-  &_image {
-    width: 400px;
-    img {
-      width: 100%;
-    }
-  }
-}
-.steps_btn {
-  margin-top: 20px;
-  display: block;
-  padding: 5px;
-  margin-right: 10px;
-  min-width: 100px;
-  background: #6557AD;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 34px;
-  color: #FFFFFF;
 }
 
 
