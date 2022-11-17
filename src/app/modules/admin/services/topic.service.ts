@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {map, Observable} from "rxjs";
-import {PostPayload} from "../dashboard/models/PostPayload";
+import {PostPayload} from "../models/PostPayload";
 
 @Injectable({
   providedIn: 'root'

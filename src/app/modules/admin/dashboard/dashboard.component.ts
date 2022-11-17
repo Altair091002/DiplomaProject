@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
-import {PostPayload} from "./models/PostPayload";
+import {PostPayload} from "../models/PostPayload";
 import {TopicService} from "../services/topic.service";
 import {Router} from "@angular/router";
 
