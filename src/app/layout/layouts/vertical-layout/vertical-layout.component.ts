@@ -13,20 +13,16 @@ export class VerticalLayoutComponent implements OnInit {
   isCompact: boolean = false;
   currentYear: number = new Date().getFullYear();
   token = this.tokenStorage.getToken();
-  email: any;
-  username: any;
+  email = this.tokenStorage.getEmail();
+  username = this.tokenStorage.getUsername();
 
   constructor(
     private tokenStorage: TokenStorageService,
-    private userService: UserService
   ) {
   }
 
   ngOnInit(): void {
-    console.log('token:', this.token)
-    if (this.token != null){
-      console.log(this.userService.userDetails());
-    }
+
   }
 
   signOut() {

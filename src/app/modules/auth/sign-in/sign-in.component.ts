@@ -31,7 +31,8 @@ export class SignInComponent implements OnInit {
       data => {
         console.log(data)
         this.tokenStorage.saveToken(data.token);
-        console.log(this.tokenStorage.getToken());
+        this.tokenStorage.saveUsername(data.username);
+        this.tokenStorage.saveEmail(data.email);
         this.router.navigate(['home']).then(
           () => { window.location.reload(); }
         )
