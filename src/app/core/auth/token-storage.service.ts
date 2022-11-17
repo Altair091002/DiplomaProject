@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Router} from "@angular/router";
 
 const TOKEN_KEY = 'AuthToken';
 const USERNAME = 'Username';
@@ -8,7 +9,7 @@ const EMAIL = 'Email';
   providedIn: 'root'
 })
 export class TokenStorageService {
-  constructor() { }
+  constructor(private router: Router) { }
 
   signOut() {
     window.sessionStorage.clear();
@@ -21,6 +22,9 @@ export class TokenStorageService {
 
   public getToken() {
     return sessionStorage.getItem(TOKEN_KEY);
+    this.router.navigate(['home']).then(
+      () => { window.location.reload(); }
+    );
   }
 
   public saveEmail(email: string) {
