@@ -1,6 +1,6 @@
 .flip {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 200px;
   text-align: center;
   &-content {
     width: 100%;
@@ -12,20 +12,41 @@
     transform: rotateY(180deg);
     transition: transform 0.3s;
   }
-  &-front, &-back {
+  &-front {
     position: absolute;
     height: 100%;
     width: 100%;
-    line-height: 150px;
+    line-height: 23px;
+    padding: 70px 20px;
     backface-visibility: hidden;
-    color: #fff;
-    background-color: lightseagreen;
-    border: 6px solid lightcoral;
-    box-shadow: 6px 6px lightseagreen;
+    font-size: 20px;
+    color: #392F6B;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: #FFFFFF;
+    border: 6px solid #6557AD;
+    box-shadow: 6px 6px #AA9EE8;
   }
+
+  &-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 23px;
+    padding: 35px 20px;
+    backface-visibility: hidden;
+    font-size: 18px;
+    color: #392F6B;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    background-color: #FFFFFF;
+    border: 6px solid #6557AD;
+    box-shadow: 6px 6px #AA9EE8;
+  }
+
   &-back {
     transform: rotateY(180deg);
-    border: 6px solid lightseagreen;
-    box-shadow: 6px 6px lightcoral;
+    border: 6px solid #AA9EE8;
+    box-shadow: 6px 6px #6557AD;
   }
 }
