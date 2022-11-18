@@ -9,10 +9,11 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import {ReactiveFormsModule} from "@angular/forms";
-import {DatePipe} from "@angular/common";
+import {CommonModule, DatePipe} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 const routes: Route[] = [
   {
@@ -39,6 +40,8 @@ const routes: Route[] = [
     MatButtonModule,
     MatDialogModule,
     DragDropModule,
+    CommonModule,
+    MatDatepickerModule,
   ]
 })
 export class DashboardModule {

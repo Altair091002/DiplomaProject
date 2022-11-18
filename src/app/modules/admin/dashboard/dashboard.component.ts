@@ -17,7 +17,7 @@ import {DashboardDialogComponent} from "./dashboard-dialog/dashboard-dialog.comp
 export class DashboardComponent implements OnInit {
   topics:any [] = [];
   dataSource !: MatTableDataSource<any>;
-  displayedColumns: string[] = [ 'title', 'text', 'author', 'createdOn', 'action'];
+  displayedColumns: string[] = [ 'title', 'content', 'author', 'createdOn', 'action'];
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
