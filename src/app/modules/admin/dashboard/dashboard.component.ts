@@ -15,9 +15,9 @@ import {DashboardDialogComponent} from "./dashboard-dialog/dashboard-dialog.comp
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  topics:any [] = [];
+  topics:PostPayload [] = [];
   dataSource !: MatTableDataSource<any>;
-  displayedColumns: string[] = [ 'title', 'content', 'author', 'createdOn', 'action'];
+  displayedColumns: string[] = [ 'id', 'title', 'content', 'createdOn', 'username', 'action'];
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getAllTopics();
   }
   openDialog() {
     this.dialog.open(DashboardDialogComponent, {
@@ -42,6 +43,7 @@ export class DashboardComponent implements OnInit {
   getAllTopics() {
     this.topicService.getAllPosts().subscribe({
       next: (res) => {
+
         console.log(res);
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;

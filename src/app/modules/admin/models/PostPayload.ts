@@ -1,7 +1,7 @@
 export class PostPayload{
   id!: String;
-  content!: String;
   title!: String;
+  content!: String;
   createdOn!: String;
   username!: String;
 }

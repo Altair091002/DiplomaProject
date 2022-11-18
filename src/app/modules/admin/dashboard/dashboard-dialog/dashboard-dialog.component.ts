@@ -75,5 +75,4 @@ export class DashboardDialogComponent implements OnInit {
         }
       });
   }
-
 }
