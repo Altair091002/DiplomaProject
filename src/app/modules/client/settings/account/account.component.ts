@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import {TokenStorageService} from "../../../../core/auth/token-storage.service";
 
 @Component({
     selector       : 'settings-account',
@@ -9,23 +10,26 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 })
 export class SettingsAccountComponent implements OnInit
 {
+  username = this.tokenStorage.getUsername();
+  email = this.tokenStorage.getEmail();
     accountForm: UntypedFormGroup = this._formBuilder.group({
-      name    : ['Brian Hughes'],
-      username: ['brianh'],
+      name    : [this.username],
+      username: [this.username],
       title   : ['Senior Frontend Developer'],
       company : ['YXZ Software'],
-      about   : ['Hey! This is Brian; husband, father and gamer. I\'m mostly passionate about bleeding edge tech and chocolate! 🍫'],
-      email   : ['hughes.brian@mail.com', Validators.email],
-      phone   : ['121-490-33-12'],
-      country : ['usa'],
-      language: ['english']
+      about   : ['Hey! This is ' + this.username + ' husband, father and gamer.'],
+      email   : [this.email, Validators.email],
+      phone   : ['+7-700-505-03-10'],
+      country : ['Kazakhstan'],
+      language: ['Kazakh']
     });
 
     /**
      * Constructor
      */
     constructor(
-        private _formBuilder: UntypedFormBuilder
+        private _formBuilder: UntypedFormBuilder,
+        private tokenStorage: TokenStorageService,
     )
     {
     }

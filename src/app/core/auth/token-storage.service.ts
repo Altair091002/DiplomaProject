@@ -22,9 +22,6 @@ export class TokenStorageService {
 
   public getToken() {
     return sessionStorage.getItem(TOKEN_KEY);
-    this.router.navigate(['home']).then(
-      () => { window.location.reload(); }
-    );
   }
 
   public saveEmail(email: string) {
