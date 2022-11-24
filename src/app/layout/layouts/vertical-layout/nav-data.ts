@@ -20,6 +20,11 @@ export const navData = [
         label: 'Контакты'
     },
     {
+      routerLink: 'pricing',
+      icon: 'money',
+      label: 'Цены'
+    },
+    {
         routerLink: 'settings',
         icon: 'settings',
         label: 'Настройки'

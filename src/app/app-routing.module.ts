@@ -16,6 +16,7 @@ const routes: Routes = [
       {path: 'contacts', loadChildren: () => import('src/app/modules/client/contacts/contacts.model').then(m => m.ContactsModel)},
       {path: 'settings', loadChildren: () => import('src/app/modules/client/settings/settings.module').then(m => m.SettingsModule)},
       {path: 'dashboard', loadChildren: () => import('src/app/modules/admin/dashboard/dashboard.module').then(m => m.DashboardModule)},
+      {path: 'pricing', loadChildren: () => import('src/app/modules/client/pricing/pricing.module').then(m => m.PricingModule)},
     ]
   }
 ];
