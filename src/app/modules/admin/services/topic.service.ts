@@ -23,7 +23,7 @@ export class TopicService {
     return this.httpClient.get<Array<PostPayload>>("http://localhost:8080/api/posts/all");
   }
 
-  getPost(permaLink: Number):Observable<PostPayload>{
+  getPost(permaLink: string | null):Observable<PostPayload>{
     return this.httpClient.get<PostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
   }
   updatePost(postPayload: any, id: any) {

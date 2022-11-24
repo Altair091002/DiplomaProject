@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {adminNavData, navData} from './nav-data';
 import {TokenStorageService} from "../../../core/auth/token-storage.service";
 import {UserService} from "../../../core/auth/user.service";
+import {SharedModule} from "../../../shared/shared.module";
 
 @Component({
   selector: 'vertical-layout',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from "../../../core/auth/user.service";
 
 @Component({
   selector: 'app-pricing',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
   }
 
+  changeStudentStatus() {
+    this.userService.changeStatus();
+  }
 }

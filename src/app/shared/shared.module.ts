@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {JwtResponse} from "../core/auth/interfaces/jwt-response";
+import {userResponse} from "../core/auth/interfaces/user-response";
 
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule,
-        ReactiveFormsModule
     ],
     exports: [
         CommonModule,
-        FormsModule,
-        ReactiveFormsModule
     ]
 })
 export class SharedModule
 {
+  userDetails?: userResponse;
 }
