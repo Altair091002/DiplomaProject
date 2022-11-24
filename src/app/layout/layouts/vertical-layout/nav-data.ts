@@ -15,6 +15,11 @@ export const navData = [
         label: 'Курсы'
     },
     {
+      routerLink: 'academy',
+      icon: 'local_library',
+      label: 'Academy'
+    },
+    {
         routerLink: 'contacts',
         icon: 'phone',
         label: 'Контакты'

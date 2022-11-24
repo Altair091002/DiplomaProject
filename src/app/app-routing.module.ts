@@ -12,6 +12,7 @@ const routes: Routes = [
       {path: 'sign-in', loadChildren: () => import('src/app/modules/auth/sign-in/sign-in.module').then(m => m.SignInModule)},
       {path: 'sign-up', loadChildren: () => import('src/app/modules/auth/sign-up/sign-up.module').then(m => m.SignUpModule)},
       {path: 'courses', loadChildren: () => import('src/app/modules/client/courses/courses.module').then(m => m.CoursesModule)},
+      {path: 'academy', loadChildren: () => import('src/app/modules/client/academy/academy.module').then(m => m.AcademyModule)},
       {path: 'about-us', loadChildren: () => import('src/app/modules/client/about-us/about-us.module').then(m => m.AboutUsModule)},
       {path: 'contacts', loadChildren: () => import('src/app/modules/client/contacts/contacts.model').then(m => m.ContactsModel)},
       {path: 'settings', loadChildren: () => import('src/app/modules/client/settings/settings.module').then(m => m.SettingsModule)},
