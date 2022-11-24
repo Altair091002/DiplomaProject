@@ -1,5 +1,5 @@
 export class PostPayload{
-  id!: String;
+  id!: any;
   title!: String;
   content!: String;
   createdOn!: String;

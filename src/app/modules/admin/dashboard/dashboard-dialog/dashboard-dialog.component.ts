@@ -2,6 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {TopicService} from "../../services/topic.service";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {PostPayload} from "../../models/PostPayload";
 
 @Component({
   selector: 'app-dashboard-dialog',
@@ -10,49 +11,44 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 })
 export class DashboardDialogComponent implements OnInit {
 
-  productForm !: FormGroup;
+  topicForm !: FormGroup;
   actionBtn = 'Save';
 
   constructor(
     private formBuilder: FormBuilder,
     private api: TopicService,
-    @Inject(MAT_DIALOG_DATA) public editData: any,
+    @Inject(MAT_DIALOG_DATA) public editData: PostPayload,
     private dialogRef: MatDialogRef<DashboardDialogComponent>
   ) { }
 
   ngOnInit(): void {
-    this.productForm = this.formBuilder.group ({
+    this.topicForm = this.formBuilder.group ({
       title  : ['', Validators.required],
-      name : ['', Validators.required],
-      description : ['', Validators.required],
-      dateCreated : ['', Validators.required],
-      unitPrice : ['', Validators.required],
-      unitsInStock : ['', Validators.required],
+      content : ['', Validators.required],
+      createdOn : ['', Validators.required],
+      username : ['', Validators.required],
     });
 
-    // if (this.editData) {
-    //   this.actionBtn = 'Update';
-    //   this.productForm.controls.title.setValue(this.editData.imageUrl);
-    //   this.productForm.controls.name.setValue(this.editData.name);
-    //   this.productForm.controls.description.setValue(this.editData.description);
-    //   this.productForm.controls.dateCreated.setValue(this.editData.dateCreated);
-    //   this.productForm.controls.unitPrice.setValue(this.editData.unitPrice);
-    //   this.productForm.controls.unitsInStock.setValue(this.editData.unitsInStock);
-    //
-    // }
+    if (this.editData) {
+      this.actionBtn = 'Update';
+      this.topicForm.controls['title'].setValue(this.editData.title);
+      this.topicForm.controls['content'].setValue(this.editData.content);
+      this.topicForm.controls['createdOn'].setValue(this.editData.createdOn);
+      this.topicForm.controls['username'].setValue(this.editData.username);
+    }
   }
   addProduct(){
     if (!this.editData){
-      if (this.productForm.valid) {
-        this.api.addPost(this.productForm.value)
+      if (this.topicForm.valid) {
+        this.api.addPost(this.topicForm.value)
           .subscribe({
             next: (res) => {
-              alert('Product added successfully!');
-              this.productForm.reset();
+              alert('topic added successfully!');
+              this.topicForm.reset();
               this.dialogRef.close('save');
             },
             error: () => {
-              alert('Error while adding the product');
+              alert('Error while adding the topic');
             }
           });
       }
@@ -62,12 +58,12 @@ export class DashboardDialogComponent implements OnInit {
     }
   }
   updateProduct() {
-    // this.api.addPost(this.productForm.value, this.editData.id)
-    this.api.addPost(this.productForm.value)
+    // this.api.addPost(this.topicForm.value, this.editData.id)
+    this.api.updatePost(this.topicForm.value, this.editData.id)
       .subscribe({
         next: (res) => {
           alert('Product updated Successfully');
-          this.productForm.reset();
+          this.topicForm.reset();
           this.dialogRef.close('update');
         },
         error: () => {

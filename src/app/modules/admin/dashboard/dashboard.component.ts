@@ -53,8 +53,30 @@ export class DashboardComponent implements OnInit {
       }
     })
   }
-  editTopics(any:any){}
-  deleteTopics(any:any){}
+  editTopics(row:any){
+    this.dialog.open(
+      DashboardDialogComponent, {
+      width: '30%',
+      data: row
+    }).afterClosed().subscribe(val => {
+      if (val === 'update'){
+        this.getAllTopics();
+      }
+    });
+  }
+  deleteTopics(id:any){
+    this.topicService.deletePost(id).subscribe({
+        next: (res) => {
+          alert('Topid Deleted successfully!');
+          this.getAllTopics();
+        },
+        error: () => {
+          alert('Error while deleting the topic');
+        }
+      }
+    );
+  }
+
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

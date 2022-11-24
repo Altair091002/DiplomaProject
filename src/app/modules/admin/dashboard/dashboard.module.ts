@@ -14,6 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {DragDropModule} from "@angular/cdk/drag-drop";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 const routes: Route[] = [
   {
@@ -42,6 +43,8 @@ const routes: Route[] = [
     DragDropModule,
     CommonModule,
     MatDatepickerModule,
+    MatNativeDateModule
+    // MatDialog
   ]
 })
 export class DashboardModule {

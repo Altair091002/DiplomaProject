@@ -26,4 +26,10 @@ export class TopicService {
   getPost(permaLink: Number):Observable<PostPayload>{
     return this.httpClient.get<PostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
   }
+  updatePost(postPayload: any, id: any) {
+    return this.httpClient.put('http://localhost:8080/api/posts/'+id, postPayload);
+  }
+  deletePost(id: any) {
+    return this.httpClient.delete('http://localhost:8080/api/posts/' +id);
+  }
 }
