@@ -3,6 +3,8 @@ import {NgModule} from "@angular/core";
 import {PricingComponent} from "./pricing.component";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {FuseCardModule} from "../../../components/fuse-card";
+import {NgStyle} from "@angular/common";
 
 const routes: Route[] = [
   {
@@ -18,7 +20,9 @@ const routes: Route[] = [
   imports: [
     RouterModule.forChild(routes),
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FuseCardModule,
+    NgStyle
   ]
 })
 export class PricingModule {
