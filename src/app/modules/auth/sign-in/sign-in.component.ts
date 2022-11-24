@@ -31,8 +31,8 @@ export class SignInComponent implements OnInit {
       data => {
         console.log(data)
         this.tokenStorage.saveToken(data.token);
-        this.tokenStorage.saveUsername(data.username);
-        this.tokenStorage.saveEmail(data.email);
+        // this.tokenStorage.saveUsername(data.username);
+        // this.tokenStorage.saveEmail(data.email);
         if (data.username != 'admin'){
           this.router.navigate(['home']).then(
             () => { window.location.reload(); }
