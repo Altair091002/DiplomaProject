@@ -11,13 +11,20 @@ import {ActivatedRoute, Route} from "@angular/router";
 })
 export class DetailsComponent implements OnInit {
 
-  post !: Observable<PostPayload>;
+  post!: PostPayload;
 
   constructor(private postService: TopicService,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.post = this.postService.getPost(this.route.snapshot.paramMap.get('id'));
+    this.postService.getPost(this.route.snapshot.paramMap.get('id')).subscribe({
+      next: (res) => {
+        this.post = res
+      },
+      error: () => {
+        alert('Error while download the post!!');
+      }
+    });
     console.log(this.post)
   }
 
