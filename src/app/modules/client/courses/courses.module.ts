@@ -10,7 +10,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-import {AsyncPipe, NgForOf} from "@angular/common";
+import {AsyncPipe, CommonModule, NgForOf} from "@angular/common";
 
 const routes: Route[] = [
   {
@@ -45,6 +45,7 @@ const routes: Route[] = [
     MatIconModule,
     MatInputModule,
     MatSlideToggleModule,
+    CommonModule,
     NgForOf,
     AsyncPipe
   ]

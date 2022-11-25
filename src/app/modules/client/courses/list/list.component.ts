@@ -9,13 +9,24 @@ import {TopicService} from "../../../admin/services/topic.service";
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  posts !: Observable<Array<PostPayload>>;
+  posts !: Array<PostPayload>;
+  completed = false;
 
   constructor(private postService: TopicService) { }
 
   ngOnInit(): void {
-    this.posts = this.postService.getAllPosts();
-    console.log("Posts:", this.posts);
+     this.postService.getAllPosts().subscribe({
+       next: (res) => {
+         console.log(res)
+         this.posts = res
+       },
+       error: () => {
+         alert('Error while download the posts!!');
+       }
+     });
   }
 
+  hideCompleted() {
+    this.completed = !this.completed;
+  }
 }
