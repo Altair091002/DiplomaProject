@@ -11,7 +11,7 @@ import {TopicService} from "../../../admin/services/topic.service";
 export class ListComponent implements OnInit {
   posts !: Array<PostPayload>;
   completed = false;
-  category = "";
+  category = "all";
 
   constructor(private postService: TopicService) { }
 
