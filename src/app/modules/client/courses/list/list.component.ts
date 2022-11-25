@@ -11,6 +11,7 @@ import {TopicService} from "../../../admin/services/topic.service";
 export class ListComponent implements OnInit {
   posts !: Array<PostPayload>;
   completed = false;
+  category = "";
 
   constructor(private postService: TopicService) { }
 
@@ -28,5 +29,9 @@ export class ListComponent implements OnInit {
 
   hideCompleted() {
     this.completed = !this.completed;
+  }
+
+  categoryChange($event: any) {
+    this.category = $event;
   }
 }

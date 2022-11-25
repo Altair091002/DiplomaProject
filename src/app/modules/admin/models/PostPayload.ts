@@ -3,6 +3,7 @@ export class PostPayload{
   title!: String;
   content!: String;
   completed!: String;
+  category!: String;
   createdOn!: String;
   username!: String;
 }
