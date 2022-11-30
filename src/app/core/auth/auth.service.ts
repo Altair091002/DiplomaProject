@@ -8,8 +8,8 @@ import {SignUpInfo} from "./interfaces/signup-info";
 })
 export class AuthService {
 
-  private signInUrl = 'http://localhost:8080/api/auth/signin';
-  private signupUrl = 'http://localhost:8080/api/auth/signup';
+  private signInUrl = 'http://localhost:7777/api/auth/signin';
+  private signupUrl = 'http://localhost:7777/api/auth/signup';
 
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

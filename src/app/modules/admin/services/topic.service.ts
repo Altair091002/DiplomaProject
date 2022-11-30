@@ -16,20 +16,20 @@ export class TopicService {
 
 
   addPost(postPayload: PostPayload){
-    return this.httpClient.post('http://localhost:8080/api/posts/', postPayload);
+    return this.httpClient.post('http://localhost:7777/api/posts/', postPayload);
   }
 
   getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("http://localhost:8080/api/posts/all");
+    return this.httpClient.get<Array<PostPayload>>("http://localhost:7777/api/posts/all");
   }
 
   getPost(permaLink: string | null):Observable<PostPayload>{
-    return this.httpClient.get<PostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
+    return this.httpClient.get<PostPayload>('http://localhost:7777/api/posts/get/' + permaLink);
   }
   updatePost(postPayload: any, id: any) {
-    return this.httpClient.put('http://localhost:8080/api/posts/'+id, postPayload);
+    return this.httpClient.put('http://localhost:7777/api/posts/'+id, postPayload);
   }
   deletePost(id: any) {
-    return this.httpClient.delete('http://localhost:8080/api/posts/' +id);
+    return this.httpClient.delete('http://localhost:7777/api/posts/' +id);
   }
 }

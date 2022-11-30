@@ -8,8 +8,8 @@ import {SharedModule} from "../../shared/shared.module";
   providedIn: 'root'
 })
 export class UserService {
-  private userDetailsUrl = 'http://localhost:8080/api/client/info';
-  private userUrl = 'http://localhost:8080/api/student/';
+  private userDetailsUrl = 'http://localhost:7777/api/client/info';
+  private userUrl = 'http://localhost:7777/api/student/';
 
   constructor(private http: HttpClient) {
   }

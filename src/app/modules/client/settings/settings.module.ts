@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Route, RouterModule} from '@angular/router';
+import {Route, RouterModule, Routes} from '@angular/router';
 import {SettingsComponent} from "./settings.component";
 import {CommonModule} from "@angular/common";
 import {MatSidenavModule} from "@angular/material/sidenav";
@@ -11,7 +11,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 
-const routes: Route[] = [
+const routes: Routes = [
   {
     path: '',
     component: SettingsComponent

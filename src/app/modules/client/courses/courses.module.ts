@@ -12,7 +12,6 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {AsyncPipe,CommonModule, NgForOf, NgIf, NgStyle} from "@angular/common";
 import {FuseCardModule} from "../../../components/fuse-card";
-import {NgxDocViewerModule} from "ngx-doc-viewer";
 
 const routes: Route[] = [
   {
@@ -53,7 +52,6 @@ const routes: Route[] = [
     FuseCardModule,
     NgStyle,
     NgIf,
-    NgxDocViewerModule
   ]
 })
 export class CoursesModule {

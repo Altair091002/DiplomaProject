@@ -25,6 +25,11 @@ export const navData = [
       label: 'Цены'
     },
     {
+      routerLink: 'exam',
+      icon: 'library_books',
+      label: 'Куизы'
+    },
+    {
         routerLink: 'settings',
         icon: 'settings',
         label: 'Настройки'
@@ -35,5 +40,15 @@ export const adminNavData = [
     routerLink: 'dashboard',
     icon: 'dashboard',
     label: 'Админ панель'
+  },
+  {
+    routerLink: 'categories',
+    icon: 'list',
+    label: 'Категории'
+  },
+  {
+    routerLink: 'quizzes',
+    icon: 'pets',
+    label: 'Тесты'
   },
 ];
