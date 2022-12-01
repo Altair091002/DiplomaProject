@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LayoutModule} from "./layout/layout.module";
 import {CoreModule} from "./core/core.module";
+import {NgxUiLoaderHttpModule, NgxUiLoaderModule} from "ngx-ui-loader";
 
 @NgModule({
     declarations: [
@@ -16,6 +17,10 @@ import {CoreModule} from "./core/core.module";
         AppRoutingModule,
         CoreModule,
         LayoutModule,
+        NgxUiLoaderModule,
+        NgxUiLoaderHttpModule.forRoot({
+          showForeground: true
+        })
     ],
     providers: [],
   exports: [

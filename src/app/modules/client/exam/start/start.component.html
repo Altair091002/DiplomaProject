@@ -3,27 +3,41 @@
     <div class="grid grid-cols-12 gap-4">
       <div class="col-start-1 col-end-3">
         <!-- instructions -->
-        <h3>instructions</h3>
+        <mat-card style="margin-top: 10px">
+          <mat-card-header>
+            <mat-card-title >Instructions</mat-card-title>
+
+          </mat-card-header>
+          <mat-card-subtitle>
+
+<!--            <h3 class="font-medium font-">Instructions</h3>-->
+            <ul>
+              <li class="list-disc ml-5">Do not refresh the page otherwise you will get new questions in this quiz.</li>
+              <li class="list-disc ml-5">Do not switch the tabs</li>
+              <li class="list-disc ml-5">Do not minimize the window</li>
+            </ul>
+          </mat-card-subtitle>
+        </mat-card>
       </div>
-      <div class="col-start-3 col-end-10">
+      <div class="col-start-3 col-end-11 ">
         <!-- questions -->
         <ng-container *ngIf="questions">
-          <h1 class="mt-5 text-xl font-bold	">
+          <h1 class="mt-5 text-2xl	font-medium	 text-center">
             On Going Quiz <b>{{ questions[0].quiz.title }}</b>
           </h1>
         </ng-container>
 
-        <mat-card *ngFor="let q of questions; let i = index" class="mt-11">
+        <mat-card *ngFor="let q of questions; let i = index" class="mt-5">
           <mat-card-content>
-            <p>
+            <p class="flex">
               <b>Q {{ i + 1 }})</b>
-              <span class="ml-10" [innerHTML]="q.content"></span>
+              <span class="ml-5" [innerHTML]="q.content"></span>
             </p>
 
-            <mat-divider> </mat-divider>
-            <br />
+            <mat-divider class="mt-3"> </mat-divider>
+            <br/>
 
-            <div class="flex mt-10">
+            <div class="grid grid-cols-2 mt-3">
               <div class="col-md-6">
                 <input
                   type="radio"
@@ -42,7 +56,7 @@
               </div>
             </div>
 
-            <div class="flex mt-10">
+            <div class="grid grid-cols-2 mt-10">
               <div class="col-md-6">
                 <input
                   type="radio"
@@ -96,11 +110,11 @@
 
 <!-- show the result -->
 <div class="bootstrap-wrapper" *ngIf="isSubmit">
-  <div class="flex mt-20">
-    <div class="col-md-6 offset-md-3">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title> Quiz Result </mat-card-title>
+  <div class="flex justify-center	items-center	 mt-20">
+    <div class="w-96 h-80">
+      <mat-card class=" w-full h-full">
+        <mat-card-header class="flex justify-center mt-20">
+          <mat-card-title class="text-center mt-10"> Quiz Result </mat-card-title>
         </mat-card-header>
         <mat-card-content class="text-center">
           <h1>Marks Got : {{ marksGot }}</h1>
@@ -108,7 +122,7 @@
           <h1>Questions Attempted :{{ attempted }}</h1>
         </mat-card-content>
         <mat-card-actions class="text-center">
-          <button mat-raised-button color="primary">Print</button>
+          <button (click)="printPage()" mat-raised-button color="primary">Print</button>
           <button
             mat-raised-button
             color="accent"

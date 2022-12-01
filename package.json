@@ -22,6 +22,7 @@
     "@ckeditor/ckeditor5-angular": "^4.0.0",
     "@ckeditor/ckeditor5-build-classic": "^35.3.2",
     "ngx-doc-viewer": "^14.0.0",
+    "ngx-ui-loader": "^13.0.0",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.6.14",
     "tslib": "^2.3.0",

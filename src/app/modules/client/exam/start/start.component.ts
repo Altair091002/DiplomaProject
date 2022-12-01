@@ -112,4 +112,8 @@ export class StartComponent implements OnInit {
 
     console.log(this.questions);
   }
+  printPage()
+  {
+    window.print();
+  }
 }
