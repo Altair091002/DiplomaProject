@@ -4,10 +4,20 @@
     <div class="col-md-12">
       <div *ngFor="let q of questions; let i = index" class="border-solid border-2 border-indigo-600 rounded-md p-4 mb-4">
         <mat-card-content>
-          <p class="flex gap-2">
-            <span class="font-bold"> Q {{ i + 1 }})</span>
-            <span class="ml20" [innerHTML]="q['content']"></span>
-          </p>
+          <div class="flex justify-between items-center gap-3">
+            <p class="flex gap-2">
+              <span class="font-bold"> Q {{ i + 1 }})</span>
+              <span class="ml20" [innerHTML]="q['content']"></span>
+            </p>
+            <div>
+              <button mat-icon-button color="warn" (click)="deleteQuestion(q['quesId'])">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-icon-button color="primary">
+                <mat-icon>create</mat-icon>
+              </button>
+            </div>
+          </div>
           <div class="my-2 container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
             <div class="flex flex-wrap ">
               <div class="md:w-1/2 pr-4 pl-4">
@@ -27,12 +37,6 @@
             </div>
           </div>
           <p><b>Correct Answer:</b> {{ q['answer'] }}</p>
-          <div class="flex justify-center gap-5">
-            <button mat-flat-button color="warn" (click)="deleteQuestion(q['quesId'])">
-              Delete
-            </button>
-            <button mat-flat-button color="primary">Update</button>
-          </div>
         </mat-card-content>
       </div>
 

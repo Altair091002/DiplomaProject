@@ -1,11 +1,11 @@
-<mat-card>
-  <h1>Add New Quiz</h1>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
+<mat-card class="m-5">
+  <mat-card-title class="text-center">Add New Quiz</mat-card-title>
+  <div class="container mx-auto sm:px-4">
+    <div class="flex flex-wrap justify-center">
+      <div class="md:w-2/3 pr-4 pl-4 md:mx-1/5">
         <form (ngSubmit)="addQuiz()">
           <!-- title field  -->
-          <mat-form-field class="w100" appearance="fill">
+          <mat-form-field class="w-full" appearance="outline">
             <mat-label>Enter Title</mat-label>
             <input
               [(ngModel)]="quizData['title']"
@@ -19,7 +19,7 @@
 
           <!-- description field  -->
 
-          <mat-form-field class="w100" appearance="fill">
+          <mat-form-field class="w-full" appearance="outline">
             <mat-label>Enter Description </mat-label>
             <textarea
               [(ngModel)]="quizData['description']"
@@ -31,10 +31,10 @@
             ></textarea>
           </mat-form-field>
 
-          <div class="row">
-            <div class="col-md-6">
+          <div class="flex flex-wrap ">
+            <div class="md:w-1/2 pr-4 pl-4">
               <!-- //max marks -->
-              <mat-form-field class="w100" appearance="fill">
+              <mat-form-field class="w-full" appearance="outline">
                 <mat-label>Maximum Marks</mat-label>
                 <input
                   [(ngModel)]="quizData['maxMarks']"
@@ -45,9 +45,9 @@
                 />
               </mat-form-field>
             </div>
-            <div class="col-md-6">
+            <div class="md:w-1/2 pr-4 pl-4">
               <!-- number of question to be shown  -->
-              <mat-form-field class="w100" appearance="fill">
+              <mat-form-field class="w-full" appearance="outline">
                 <mat-label>Number of Question</mat-label>
                 <input
                   [(ngModel)]="quizData['numberOfQuestions']"
@@ -72,7 +72,7 @@
 
           <br />
           <!-- //category select  -->
-          <mat-form-field appearance="fill" class="mt20 w100">
+          <mat-form-field appearance="outline" class="mt-4 w-full">
             <mat-label>Categories</mat-label>
             <mat-select name="category" [(ngModel)]="quizData['category']['cid']">
               <mat-option *ngFor="let c of categories" [value]="c['cid']">
@@ -81,7 +81,7 @@
             </mat-select>
           </mat-form-field>
 
-          <div class="container text-center">
+          <div class="container mx-auto sm:px-4 text-center">
             <button mat-raised-button color="accent" type="submit">Add</button>
           </div>
         </form>
