@@ -1,19 +1,19 @@
-<div class="bootstrap-wrapper" *ngIf="!isSubmit">
+<div class="p-8" *ngIf="!isSubmit">
   <div class="container-fluid">
-    <div class="flex">
-      <div class="col-md-2">
+    <div class="grid grid-cols-12 gap-4">
+      <div class="col-start-1 col-end-3">
         <!-- instructions -->
         <h3>instructions</h3>
       </div>
-      <div class="col-md-8">
+      <div class="col-start-3 col-end-10">
         <!-- questions -->
         <ng-container *ngIf="questions">
-          <h1 class="mt-5">
+          <h1 class="mt-5 text-xl font-bold	">
             On Going Quiz <b>{{ questions[0].quiz.title }}</b>
           </h1>
         </ng-container>
 
-        <mat-card *ngFor="let q of questions; let i = index" class="mt-10">
+        <mat-card *ngFor="let q of questions; let i = index" class="mt-11">
           <mat-card-content>
             <p>
               <b>Q {{ i + 1 }})</b>
@@ -69,10 +69,10 @@
           </button>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-start-11 col-end-13">
         <!-- progress -->
 
-        <mat-card style="margin-top: 70px">
+        <mat-card style="margin-top: 10px">
           <mat-card-header>
             <mat-card-title> Progress </mat-card-title>
             <mat-card-subtitle>
@@ -112,7 +112,7 @@
           <button
             mat-raised-button
             color="accent"
-            [routerLink]="'/user-dashboard/0'"
+            [routerLink]="'/exam/0'"
           >
             Home
           </button>

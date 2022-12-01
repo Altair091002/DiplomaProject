@@ -5,10 +5,9 @@
     <div class="col-md-12">
       <div class="container text-center">
         <button
+          [routerLink]="'/quizzes/add-question/' + qId + '/' + qTitle"
           mat-raised-button
           color="accent">
-<!--          [routerLink]="'/admin/add-question/' + qId + '/' + qTitle"-->
-        >
           Add Question
         </button>
       </div>

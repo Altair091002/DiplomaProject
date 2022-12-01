@@ -23,6 +23,7 @@ import { ViewQuizQuestionComponent } from './view-quiz-question/view-quiz-questi
 import { UpdateQuizComponent } from './update-quiz/update-quiz.component';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatSelectModule} from "@angular/material/select";
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 
 
 const routes: Route[] = [
@@ -41,6 +42,10 @@ const routes: Route[] = [
   {
     path: 'update-quiz/:qId',
     component: UpdateQuizComponent
+  },
+  {
+    path: 'add-question/:qId/:qTitle',
+    component: AddQuestionComponent
   },
 ];
 
@@ -74,6 +79,7 @@ const routes: Route[] = [
     MatSnackBarModule,
     MatSlideToggleModule,
     MatSelectModule,
+    CKEditorModule,
     // MatDialog
   ]
 })

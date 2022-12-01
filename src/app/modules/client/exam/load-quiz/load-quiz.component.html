@@ -1,34 +1,34 @@
 <div class="container">
-  <h1 class="mt20 font-bold	text-3xl	">Available Quizzes</h1>
-  <div class="flex mt-8" *ngIf="quizzes">
-    <div class="col-md-4" *ngFor="let q of quizzes">
-      <mat-card class="mb-5">
+  <h1 class = "font-bold	text-3xl	">Available Quizzes</h1>
+  <div class = "grid grid-cols-3 gap-6 w-full mt-8" *ngIf="quizzes">
+    <div class="w-full" *ngFor="let q of quizzes">
+      <mat-card class="mb-5 " >
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>
             {{ q.title }}
           </mat-card-title>
-          <mat-card-subtitle>
-            {{ q.category.title }}
+          <mat-card-subtitle class="min-h-fit">
+            {{ q['category']['title'] }}
           </mat-card-subtitle>
         </mat-card-header>
-        <mat-card-content>
+        <mat-card-content class="min-h-fit	">
           <p class="truncate">{{ q.description }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button color="primary">View</button>
+          <button mat-raised-button color="primary">View</button>
           <button
-            mat-button
+            mat-raised-button
             color="accent"
             [routerLink]="['../instructions/' + q.qId]"
             class="ml10"
           >
             Start
           </button>
-          <button mat-button color="accent">
+          <button mat-button color="primary">
             Questions :{{ q.numberOfQuestions }}
           </button>
-          <button mat-button color="accent">M.M :{{ q.maxMarks }}</button>
+          <button mat-button color="primary">M.M :{{ q.maxMarks }}</button>
         </mat-card-actions>
       </mat-card>
     </div>

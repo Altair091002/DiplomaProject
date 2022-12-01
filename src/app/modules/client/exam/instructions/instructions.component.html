@@ -1,20 +1,20 @@
 <div class="container">
-  <div class="flex">
-    <div class="col-md-12">
+  <div class="flex w-full">
+    <div class="w-full text-center">
       <mat-card class="w-full">
-        <mat-card-header>
+        <mat-card-header class="flex justify-center">
           <!-- heading -->
-          <mat-card-title>
+          <mat-card-title class="flex justify-center">
             Read the instructions of this page carefully
           </mat-card-title>
-          <mat-card-subtitle> One step more to go </mat-card-subtitle>
+          <mat-card-subtitle class="" > One step more to go </mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content class="ml-5">
           <!-- content  -->
 
-          <h1>{{ quiz.title }}</h1>
-          <p>{{ quiz.description }}</p>
+          <h1>{{ quiz['title'] }}</h1>
+          <p>{{ quiz['description'] }}</p>
 
           <mat-divider></mat-divider>
           <br />
