@@ -47,7 +47,7 @@ export class UpdateQuizComponent implements OnInit {
     this._quiz.updateQuiz(this.quiz).subscribe(
       (data) => {
         Swal.fire('Success !!', 'quiz updated', 'success').then((e) => {
-          this._router.navigate(['/admin/quizzes']);
+          this._router.navigate(['/quizzes']);
         });
       },
       (error) => {

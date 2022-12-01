@@ -7,7 +7,7 @@
           <div class="flex justify-between items-center gap-3">
             <p class="flex gap-2">
               <span class="font-bold"> Q {{ i + 1 }})</span>
-              <span class="ml20" [innerHTML]="q['content']"></span>
+              <span class="ml-1" [innerHTML]="q['content']"></span>
             </p>
             <div>
               <button mat-icon-button color="warn" (click)="deleteQuestion(q['quesId'])">

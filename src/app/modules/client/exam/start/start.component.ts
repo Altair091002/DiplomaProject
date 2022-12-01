@@ -39,9 +39,6 @@ export class StartComponent implements OnInit {
 
         this.timer = this.questions.length * 2 * 60;
 
-        this.questions.forEach((q:any) => {
-          q['givenAnswer'] = '';
-        });
 
         console.log(this.questions);
         this.startTimer();
@@ -91,26 +88,41 @@ export class StartComponent implements OnInit {
   }
   evalQuiz() {
     //calculation
-    this.isSubmit = true;
 
-    this.questions.forEach((q:any) => {
-      if (q.givenAnswer == q.answer) {
-        this.correctAnswers++;
-        let marksSingle =
-          this.questions[0].quiz.maxMarks / this.questions.length;
-        this.marksGot += marksSingle;
+    //call to server to check questions
+    this._question.evalQuiz(this.questions).subscribe(
+      (data:any)=> {
+        console.log(data);
+        this.marksGot = parseFloat(Number(data.marksGot).toFixed(2));
+        this.correctAnswers = data.correctAnswers;
+        this.attempted = data.attempted;
+        this.isSubmit = true;
+      },
+      (error) => {
+        console.log(error);
       }
+    )
 
-      if (q.givenAnswer.trim() != '') {
-        this.attempted++;
-      }
-    });
-
-    console.log('Correct Answers :' + this.correctAnswers);
-    console.log('Marks Got ' + this.marksGot);
-    console.log('attempted ' + this.attempted);
-
-    console.log(this.questions);
+    // this.isSubmit = true;
+    //
+    // this.questions.forEach((q:any) => {
+    //   if (q.givenAnswer == q.answer) {
+    //     this.correctAnswers++;
+    //     let marksSingle =
+    //       this.questions[0].quiz.maxMarks / this.questions.length;
+    //     this.marksGot += marksSingle;
+    //   }
+    //
+    //   if (q.givenAnswer.trim() != '') {
+    //     this.attempted++;
+    //   }
+    // });
+    //
+    // console.log('Correct Answers :' + this.correctAnswers);
+    // console.log('Marks Got ' + this.marksGot);
+    // console.log('attempted ' + this.attempted);
+    //
+    // console.log(this.questions);
   }
   printPage()
   {
